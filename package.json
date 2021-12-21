@@ -3,7 +3,7 @@
   "version": "0.1.1-alpha",
   "description": "Parse dates to chunks",
   "keywords": "date chunk split divide timestamp",
-  "main": "build/index.js",
+  "main": "index.js",
   "author": "Michal Honc",
   "url": "michalhonc.cz",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "doc": "typedoc --out docs src/index.ts --entryDocument Readme.md --hideBreadcrumbs true",
     "lint": "eslint --ext ts --report-unused-disable-directives .",
     "tsc": "tsc",
-    "build": "esbuild ./src/index.ts --bundle --minify --outfile=build/index.js",
+    "build": "esbuild ./src/index.ts --bundle --minify --outfile=index.js",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
