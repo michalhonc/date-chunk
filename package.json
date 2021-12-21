@@ -1,6 +1,6 @@
 {
   "name": "date-chunk",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Parse dates to chunks",
   "main": "index.js",
   "author": "Michal Honc",
@@ -12,7 +12,9 @@
     "test:watch": "jest --watch",
     "doc": "typedoc --out docs src/index.ts --entryDocument Readme.md --hideBreadcrumbs true",
     "lint": "eslint --ext ts --report-unused-disable-directives .",
-    "build": "esbuild ./src/index.ts --bundle --minify --outfile=build/index.js"
+    "tsc": "tsc",
+    "build": "esbuild ./src/index.ts --bundle --minify --outfile=build/index.js",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -36,6 +38,11 @@
     "ts-node-dev": "^1.1.8",
     "tslib": "^2.3.1",
     "typedoc": "^0.22.10",
-    "typedoc-plugin-markdown": "^3.11.8"
+    "typedoc-plugin-markdown": "^3.11.8",
+    "semantic-release": "^18.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michalhonc/date-chunk.git"
   }
 }
