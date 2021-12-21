@@ -20,6 +20,8 @@ jobs:
         run: yarn run lint
       - name: Run tests
         run: yarn run test
+      - name: Generate TS declaration files
+        run: yarn run types
       - name: Run build
         run: yarn run build
       - name: Release

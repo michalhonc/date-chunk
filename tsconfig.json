@@ -10,10 +10,10 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "CommonJS",
     "moduleResolution": "node",
-    "noEmit": true,
     "checkJs": false,
     "allowJs": true,
     "noUnusedLocals": true,
+    "outDir": "./lib",
     "noUnusedParameters": true,
     "paths": {
       "~/*": ["src/*"]

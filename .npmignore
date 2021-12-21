@@ -1,0 +1,16 @@
+src/tests
+coverage
+.github
+docs
+
+src/**/*.test.js
+
+# editor settings
+.editorconfig
+.eslintrc.js
+.prettierrc.js
+babel.config.js
+commitlint.config.js
+jest.config.js
+tsconfig.json
+yarn-error.log

@@ -20,7 +20,7 @@ export interface MaxLimitPerChunkOptions extends ChunkDateOptionsBase {
 
 export interface ChunksOptions extends ChunkDateOptionsBase {
   chunks: number
-  strictSizedChunks: boolean
+  strictSizedChunks?: boolean
 }
 
 export type ChunkDateOptions = ChunksOptions | MaxLimitPerChunkOptions

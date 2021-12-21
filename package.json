@@ -3,7 +3,9 @@
   "version": "0.1.1-alpha",
   "description": "Parse dates to chunks",
   "keywords": "date chunk split divide timestamp",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "types": "./lib/index.d.ts",
   "author": "Michal Honc",
   "url": "michalhonc.cz",
   "license": "MIT",
@@ -14,7 +16,8 @@
     "doc": "typedoc --out docs src/index.ts --entryDocument Readme.md --hideBreadcrumbs true",
     "lint": "eslint --ext ts --report-unused-disable-directives .",
     "tsc": "tsc",
-    "build": "esbuild ./src/index.ts --bundle --outfile=index.js --format=cjs --minify",
+    "types": "npx npm-dts generate --output lib/index.d.ts",
+    "build": "esbuild ./src/index.ts --bundle --outfile=lib/index.js --format=cjs --minify",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
@@ -22,6 +25,7 @@
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
     "@commitlint/cli": "^15.0.0",
+    "@size-limit/preset-small-lib": "^7.0.4",
     "@strv/commitlint-config": "^2.0.0",
     "@strv/eslint-config-typescript": "^3.0.0",
     "@strv/prettier-config": "^2.0.0",
@@ -35,12 +39,14 @@
     "eslint": "^8.5.0",
     "jest": "^27.4.5",
     "jsdoc-to-markdown": "^7.1.0",
+    "npm-dts": "^1.3.10",
     "prettier": "^2.5.1",
+    "semantic-release": "^18.0.1",
+    "size-limit": "^7.0.4",
     "ts-node-dev": "^1.1.8",
     "tslib": "^2.3.1",
     "typedoc": "^0.22.10",
-    "typedoc-plugin-markdown": "^3.11.8",
-    "semantic-release": "^18.0.1"
+    "typedoc-plugin-markdown": "^3.11.8"
   },
   "repository": {
     "type": "git",
