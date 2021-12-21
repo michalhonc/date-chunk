@@ -1,6 +1,12 @@
-
-
 # date-chunk
+<p align="center">
+  <img alt="Minzipped size" src="https://badgen.net/bundlephobia/minzip/date-chunk">
+  <img alt="Version" src="https://badgen.net/npm/v/date-chunk" />
+  <img alt="Dependency count" src="https://badgen.net/bundlephobia/dependency-count/date-chunk" />
+  <img alt="Types included" src="https://badgen.net/npm/types/tslib">
+</p>
+
+
 Split date range into multiple chunks. You can divide date range either into specified number of chunks or via size of chunk.
 
 ## Install
