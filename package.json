@@ -1,6 +1,6 @@
 {
   "name": "date-chunk",
-  "version": "0.1.1-alpha",
+  "version": "1.0.0",
   "description": "Parse dates to chunks",
   "keywords": "date chunk split divide timestamp",
   "main": "./lib/index.js",
