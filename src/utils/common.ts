@@ -1,4 +1,4 @@
-import type { ChunkDate, TimeType } from '../types';
+import type { ChunkDate, TimeType } from '../types'
 
 type TimeTypeList = {
   [key in TimeType]: number;
@@ -10,8 +10,8 @@ export const timeTypeList: TimeTypeList = {
   m: 60_000,
   h: 3_600_000,
   d: 86_400_000,
-};
+}
 
 export function getTimestamp(time: ChunkDate): number {
-  return time instanceof Date ? time.valueOf() : time;
+  return time instanceof Date ? time.valueOf() : time
 }

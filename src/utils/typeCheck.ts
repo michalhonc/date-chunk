@@ -1,8 +1,7 @@
-export function isDate(date: any): boolean {
-  // return date && Object.prototype.toString.call(date) === '[object Date]' && !isNaN(date);
+export function isDate(date: unknown): boolean {
   return date instanceof Date
 }
 
-export function isNumber(value: any): boolean {
+export function isNumber(value: unknown): boolean {
   return Object.prototype.toString.call(value) === '[object Number]'
 }

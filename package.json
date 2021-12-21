@@ -4,10 +4,13 @@
   "description": "Parse dates to chunks",
   "main": "index.js",
   "author": "Michal Honc",
+  "url": "michalhonc.cz",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev ./src/index.ts",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "doc": "typedoc --out docs src/index.ts --entryDocument Readme.md --hideBreadcrumbs true",
     "lint": "eslint --ext ts --report-unused-disable-directives .",
     "build": "esbuild ./src/index.ts --bundle --minify --outfile=build/index.js"
   },
@@ -28,8 +31,11 @@
     "esbuild": "^0.14.6",
     "eslint": "^8.5.0",
     "jest": "^27.4.5",
+    "jsdoc-to-markdown": "^7.1.0",
     "prettier": "^2.5.1",
     "ts-node-dev": "^1.1.8",
-    "tslib": "^2.3.1"
+    "tslib": "^2.3.1",
+    "typedoc": "^0.22.10",
+    "typedoc-plugin-markdown": "^3.11.8"
   }
 }

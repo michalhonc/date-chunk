@@ -1,9 +1,6 @@
 'use strict'
 module.exports = {
-  extends: [
-    '@strv/typescript',
-    '@strv/typescript/style',
-  ],
+  extends: ['@strv/typescript'],
   parserOptions: {
     project: './tsconfig.json',
   },
