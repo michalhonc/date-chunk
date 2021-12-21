@@ -30,8 +30,8 @@ describe('chunkDate', () => {
 
     test('no formating options', () => {
       const chunks = chunkDate({
-        start: new Date(1995, 4, 21),
-        end: new Date(1996, 4, 20),
+        start: new Date('1995-04-21T00:00:00.000Z'),
+        end: new Date('1996-04-20T00:00:00.000Z'),
       });
       expect(Array.isArray(chunks) && chunks.length === 0).toBe(true);
     });
@@ -39,32 +39,32 @@ describe('chunkDate', () => {
 
   describe('with different formated inputs', () => {
     const chunksWithDate = chunkDate({
-      start: new Date(1995, 4, 21),
-      end: new Date(1996, 4, 21),
+      start: new Date('1995-04-21T00:00:00.000Z'),
+      end: new Date('1996-04-20T00:00:00.000Z'),
       chunks: 13,
     });
 
     const chunksWithTimestamp = chunkDate({
-      start: 801007200000,
-      end: 832629600000,
+      start: 798422400000,
+      end: 829958400000,
       chunks: 13,
     });
 
     const chunksWithBoth = chunkDate({
-      start: new Date(1995, 4, 21),
-      end: 832629600000,
+      start: new Date('1995-04-21T00:00:00.000Z'),
+      end: 829958400000,
       chunks: 13,
     });
 
     const chunksMaxLimitWithBoth = chunkDate({
-      start: new Date(1995, 4, 21),
-      end: 832629600000,
+      start: new Date('1995-04-21T00:00:00.000Z'),
+      end: 829958400000,
       maxLimitPerChunk: [30, 'd'],
     });
 
     const chunksMaxLimitWithBothReverse = chunkDate({
-      start: 801007200000,
-      end: new Date(1996, 4, 21),
+      start: 798422400000,
+      end: new Date('1996-04-20T00:00:00.000Z'),
       maxLimitPerChunk: [30, 'd'],
     });
 
@@ -93,14 +93,14 @@ describe('chunkDate', () => {
 
   describe('with chunks dates', () => {
     const chunks = chunkDate({
-      start: new Date(1995, 4, 21),
-      end: new Date(1996, 4, 21),
+      start: new Date('1995-04-21T00:00:00.000Z'),
+      end: new Date('1996-04-20T00:00:00.000Z'),
       chunks: 13,
     });
 
     const strictChunks = chunkDate({
-      start: new Date(1995, 4, 21),
-      end: new Date(1996, 4, 21),
+      start: new Date('1995-04-21T00:00:00.000Z'),
+      end: new Date('1996-04-20T00:00:00.000Z'),
       chunks: 13,
       strictSizedChunks: true,
     });
@@ -116,7 +116,7 @@ describe('chunkDate', () => {
     });
 
     test('first date equals', () => {
-      expect(chunks[0].start.valueOf()).toBe(801007200000);
+      expect(chunks[0].start.valueOf()).toBe(798422400000);
     });
 
     test('unstrict sized chunks are different', () => {
@@ -133,8 +133,8 @@ describe('chunkDate', () => {
 
   describe('with ranges', () => {
     const chunks = chunkDate({
-      start: new Date(1995, 4, 21),
-      end: new Date(1996, 4, 20),
+      start: new Date('1995-04-21T00:00:00.000Z'),
+      end: new Date('1996-04-20T00:00:00.000Z'),
       maxLimitPerChunk: [1, 'd'],
     });
 
@@ -151,7 +151,7 @@ describe('chunkDate', () => {
     });
 
     test('first date equals', () => {
-      expect(chunks[0].start.valueOf()).toBe(801007200000);
+      expect(chunks[0].start.valueOf()).toBe(798422400000);
     });
   });
 });
