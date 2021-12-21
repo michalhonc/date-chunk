@@ -1,2 +1,2 @@
-export * from './chunkDate'
-export * from './types'
+export * from './chunkDate';
+export * from './types';

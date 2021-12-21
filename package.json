@@ -14,7 +14,7 @@
     "doc": "typedoc --out docs src/index.ts --entryDocument Readme.md --hideBreadcrumbs true",
     "lint": "eslint --ext ts --report-unused-disable-directives .",
     "tsc": "tsc",
-    "build": "esbuild ./src/index.ts --bundle --minify --outfile=index.js",
+    "build": "esbuild ./src/index.ts --bundle --outfile=index.js --format=cjs --minify",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
