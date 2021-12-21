@@ -3,7 +3,7 @@
   "version": "0.1.1-alpha",
   "description": "Parse dates to chunks",
   "keywords": "date chunk split divide timestamp",
-  "main": "index.js",
+  "main": "build/index.js",
   "author": "Michal Honc",
   "url": "michalhonc.cz",
   "license": "MIT",
