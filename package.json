@@ -1,7 +1,8 @@
 {
   "name": "date-chunk",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "Parse dates to chunks",
+  "keywords": "date chunk split divide timestamp",
   "main": "index.js",
   "author": "Michal Honc",
   "url": "michalhonc.cz",
